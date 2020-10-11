@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from beep-in.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Oct 2020 22:51:35 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="utf-8" />
+    <meta content="" name="description" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <link href="apple-touch-icon.html" rel="apple-touch-icon" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="favicon.ico" rel="icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Beep-In - Bulk SMS Dashboard and REST API</title>
+
+    <link href="static/css/vendor.min.css" rel="stylesheet" />
+    <link href="static/css/dashcore.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="st-nav navbar main-nav navigation fixed-top dark-link">
+          <div class="container">
+            <ul class="st-nav-menu nav navbar-nav">
+              <li class="st-nav-section nav-item">
+                <a class="navbar-brand" href="index.html"
+                  ><img
+                    alt="Beep In"
+                    class="logo d-none d-md-block"
+                    src="static/img/blogo.png"
+                /></a>
+              </li>
+              <li
+                class="st-nav-section st-nav-primary nav-item"
+                style="margin: auto"
+              >
+                <a
+                  class="st-root-link item-about st-has-dropdown nav-link"
+                  data-dropdown="about"
+                  >Home</a
+                >
+
+                <a
+                  class="st-root-link item-products st-has-dropdown nav-link"
+                  data-dropdown="products"
+                  href="#"
+                  >Products</a
+                >
+                <a class="st-root-link nav-link" href="support.html"
+                  >Contact us</a
+                >
+              </li>
+              <li
+                class="st-nav-section st-nav-secondary nav-item"
+                style="margin-left: 0"
+              >
+                <a
+                  class="st-root-link nav-link"
+                  href="account"
+                  style="font-size: 17px; font-weight: 600; color: #3f179a"
+                  >Sign Up</a
+                >
+                <a
+                  class="st-root-link nav-link"
+                  href="account"
+                  style="font-size: 17px; font-weight: 600; color: #3f179a"
+                  >Login &raquo;</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="st-dropdown-root">
+            <div class="st-dropdown-bg">
+              <div class="st-alt-bg"></div>
+            </div>
+            <div class="st-dropdown-arrow"></div>
+            <div class="st-dropdown-container">
+              <div class="st-dropdown-section" data-dropdown="about">
+                <div class="st-dropdown-content">
+                  <div class="st-dropdown-content-group">
+                    <a class="dropdown-item" href="about.html">
+                      <div class="media mb-4">
+                        <div class="media-body">
+                          <h3 class="link-title m-0">Home Beep-In</h3>
+                          <p class="m-0 text-secondary">
+                            How we are building a technology oriented business
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                          </p>
+                        </div></div
+                    ></a>
+                    <h4 class="" style="font-weight: 600">
+                      The Company Network
+                    </h4>
+                    <div class="row">
+                      <div class="col mr-4">
+                        <a class="dropdown-item" href="customers.html"
+                          ><i class="fas fa-user-tie"></i> Customers</a
+                        >
+                        <a class="dropdown-item" href="customers.html"
+                          ><i class="fas fa-building"></i> Partners</a
+                        >
+                      </div>
+                      <div class="col mr-4">
+                        <a class="dropdown-item" href="support.html"
+                          ><i class="fas fa-question-circle"></i> FAQs</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="st-dropdown-content-group">
+                    <h3 class="link-title">
+                      Global Network <i class="fas fa-globe icon"></i>
+                    </h3>
+                    <div class="row">
+                      <div class="col">
+                        <span class="dropdown-item text-secondary"
+                          ><img
+                            src="static/img/kenya.png"
+                            style="width: 20px"
+                          />
+                          Kenya</span
+                        >
+                        <span class="dropdown-item text-secondary"
+                          ><img
+                            src="static/img/uganda.png"
+                            style="width: 20px"
+                          />
+                          Uganda</span
+                        >
+                        <span class="dropdown-item text-secondary"
+                          ><img
+                            src="static/img/tanzania.png"
+                            style="width: 20px"
+                          />
+                          Tanzania</span
+                        >
+                      </div>
+                      <div class="col">
+                        <span class="dropdown-item text-secondary"
+                          ><img
+                            src="static/img/rwanda.png"
+                            style="width: 20px"
+                          />
+                          Rwanda</span
+                        >
+                        <span class="dropdown-item text-secondary"
+                          ><img
+                            src="static/img/burundi.png"
+                            style="width: 20px"
+                          />
+                          Burundi</span
+                        >
+                        <span class="dropdown-item text-secondary"
+                          ><img
+                            src="static/img/nigeria.png"
+                            style="width: 20px"
+                          />
+                          Nigeria</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="st-dropdown-section" data-dropdown="api">
+                <div class="st-dropdown-content">
+                  <div class="st-dropdown-content-group">
+                    <a
+                      class="dropdown-item"
+                      target="_blank"
+                      href="../docs.beep-in.com/index.html"
+                    >
+                      <div class="media mb-4">
+                        <div class="media-body">
+                          <h3 class="link-title m-0">API Reference</h3>
+                          <p class="m-0 text-secondary">
+                            See our REST API documentation
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                          </p>
+                        </div></div
+                    ></a>
+                    <h4 class="" style="font-weight: 600">API Quick Links</h4>
+                    <div class="row">
+                      <div class="col mr-4">
+                        <a
+                          class="dropdown-item"
+                          href="../docs.beep-in.com/developers/contacts/add"
+                          >Create contact</a
+                        >
+                        <a class="dropdown-item" href="#">Edit contact</a>
+                        <a class="dropdown-item" href="#">Fetch contacts</a>
+                        <a class="dropdown-item" href="#">Delete contacts</a>
+                      </div>
+                      <div class="col mr-4">
+                        <a
+                          class="dropdown-item"
+                          href="../docs.beep-in.com/developers/groups/add"
+                          >Create group</a
+                        >
+                        <a class="dropdown-item" href="#">Edit group</a>
+                        <a class="dropdown-item" href="#">Add group members</a>
+                        <a class="dropdown-item" href="#"
+                          >Remove group members</a
+                        >
+                        <a class="dropdown-item" href="#"
+                          >Fetch group members</a
+                        >
+                        <a class="dropdown-item" href="#">Delete group</a>
+                      </div>
+                      <div class="col mr-4">
+                        <a
+                          class="dropdown-item"
+                          href="../docs.beep-in.com/developers/messages/send"
+                          >Send message</a
+                        >
+                        <a class="dropdown-item" href="#">Send group message</a>
+                        <a class="dropdown-item" href="#"
+                          >Send broadcast message</a
+                        >
+                        <a class="dropdown-item" href="#">Schedule messages</a>
+                        <a class="dropdown-item" href="#">Fetch Messages</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="st-dropdown-content-group">
+                    <p class="dropdown-item">
+                      API Version
+                      <span class="badge badge-pill badge-primary">1.3</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="st-dropdown-section" data-dropdown="products">
+                <div class="st-dropdown-content">
+                  <div class="st-dropdown-content-group">
+                    <div class="row">
+                      <div class="col">
+                        <h5
+                          style="
+                            font-weight: 600;
+                            color: #3f179a;
+                            margin-left: 4px;
+                          "
+                        >
+                          Beep-In
+                        </h5>
+                        <a class="dropdown-item" href="account">
+                          <div class="media mb-2">
+                            <div class="media-body">
+                              <h3 class="link-title m-0">Sms Dashboard</h3>
+                              <p class="m-0 text-secondary">
+                                Send bulk sms seamlessly on our dashboard
+                              </p>
+                            </div>
+                          </div></a
+                        >
+                        <a
+                          class="dropdown-item"
+                          href="../docs.beep-in.com/index.html"
+                        >
+                          <div class="media mb-2">
+                            <div class="media-body">
+                              <h3 class="link-title m-0">Bulk SMS Rest API</h3>
+                              <p class="m-0 text-secondary">
+                                Connect your application to our sms API
+                              </p>
+                            </div>
+                          </div></a
+                        >
+                        <a
+                          class="dropdown-item"
+                          href="../docs.beep-in.com/developers/contacts/add"
+                        >
+                          <div class="media mb-2">
+                            <div class="media-body">
+                              <h3 class="link-title m-0">
+                                Contact Management System
+                              </h3>
+                              <p class="m-0 text-secondary">
+                                Sync your contacts to our SMS platform
+                              </p>
+                            </div>
+                          </div></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="st-dropdown-content-group">
+                    <div class="row">
+                      <div class="col">
+                        <a class="dropdown-item" href="#"
+                          >Bulk SMS Version 1.3
+                          <span class="badge badge-pill badge-primary"
+                            >New</span
+                          ></a
+                        >
+
+                        <span
+                          class="dropdown-item d-flex align-items-center text-muted"
+                          >Contact Grouping
+                          <i
+                            class="fas fa-check-circle ml-auto"
+                            style="color: #42d142"
+                          ></i
+                        ></span>
+
+                        <span
+                          class="dropdown-item d-flex align-items-center text-muted"
+                          >Balance Alerts
+                          <i
+                            class="fas fa-check-circle ml-auto"
+                            style="color: #42d142"
+                          ></i
+                        ></span>
+                      </div>
+                      <div class="col"></div>
+                      <div class="col"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main class="">
+      <header class="header payment-services-header section" id="home">
+        <div
+          class="container"
+          style="
+            background: url('static/img/banner78.png');
+            background-size: cover;
+          "
+        >
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-left section-heading">
+              <h2 class="">
+                <span style="color: #080033">Send bulk messages to</span><br />
+                <span style="color: #3f179a; font-weight: 600"
+                  >180+ Countries</span
+                >
+              </h2>
+              <p style="font-size: 27px; color: #080033">
+                Seamlessly connect your clients, friends, business partners via
+                bulk sms. connect through our dashboard or bulk sms api
+              </p>
+              <div class="my-5">
+                <a
+                  class="btn btn-lg px-4 mx-auto mr-md-0"
+                  style="border: 2px solid #3f179a; color: #3f179a"
+                  href="account"
+                  >Start Now<i class="fas fa-long-arrow-alt-right ml-2"></i
+                ></a>
+                <a
+                  class="btn btn-lg btn-outline px-4 mx-auto mr-md-0"
+                  href="../docs.beep-in.com/index.html"
+                  style="color: #29d794"
+                  >API Documentation<i
+                    class="fas fa-long-arrow-alt-right ml-2"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <img src="static/img/bho.png" style="width: 120%" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section mt-6" style="text-align: center">
+        <div class="container bring-to-front" style="text-align: center">
+          <div class="text-center mb-6">
+            <h2 class="bold">Our Products & Services</h2>
+          </div>
+          <div class="boxs">
+            <div class="cards">
+              <div class="imgBxs">
+                  <img  src="./aldo.png" alt="images">
+              </div>
+              <div class="detailss">
+                  <h2>Bulk Emails</h2>
+              </div>
+            </div>
+          
+             <div class="cards">
+               <div class="imgBxs">
+                  <img  src="./truck.jpg" alt="images">
+               </div>
+               <div class="detailss">
+                  <h2>Truck Fleet Trucking System</h2>
+                </div>
+             </div>
+             <div class="cards">
+              <div class="imgBxs">
+                 <img   src="./download (1).png" alt="images">
+              </div>
+              <div class="detailss">
+                 <h2>School Management System</h2>
+               </div>
+            </div>
+            <div class="cards">
+              <div class="imgBxs">
+                 <img  src="./bulkSMS.png" alt="images">
+              </div>
+              <div class="detailss">
+                 <h2>Bulk SMS.</h2>
+               </div>
+            </div>
+            <div class="cards">
+              <div class="imgBxs">
+                 <img src="./download.png" alt="images">
+              </div>
+              <div class="detailss">
+                 <h2>Call Center Solution</h2>
+               </div>
+            </div>
+             <div class="cards">
+               <div class="imgBxs">
+                  <img src="./voice.png" alt="images">
+               </div>
+               <div class="detailss">
+                  <h2>Voice Blasting Solution</h2>
+                </div>
+             </div>
+       
+        </div>
+<!-- 
+          <div class="row gap-y" style="width: 100%">
+            <div class="col-md-3">
+              <div class="picture-card">
+                <img
+                  src="./aldo.png"
+                  alt="Coding is great"
+                  style="width: 100%"
+                />
+                <div class="text-box">
+                  <p>Bulk Emails</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="picture-card">
+                <img
+                  src="./truck.jpg"
+                  alt="Coding is great"
+                  style="width: 100%"
+                />
+                <div class="text-box">
+                  <p>Truck Fleet Trucking System</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="picture-card">
+                <img
+                  src="./download (1).png"
+                  alt="Coding is great"
+                  style="width: 100%"
+                />
+                <div class="text-box">
+                  <p>School Management System</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" style="width: 100%">
+              <div class="picture-card">
+                <img
+                  src="./bulkSMS.png"
+                  alt="Coding is great"
+                  style="width: 100%"
+                />
+                <div class="text-box">
+                  <p>Bulk SMS.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="picture-card">
+                <img
+                  src="./download.png"
+                  alt="Coding is great"
+                  style="width: 100%"
+                />
+                <div class="text-box">
+                  <p>Call Center Solution</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="picture-card">
+                <img
+                  src="./voice.png"
+                  alt="Coding is great"
+                  style="width: 100%"
+                />
+                <div class="text-box">
+                  <p>Voice Blasting Solution</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="section mt-6">
+        <div class="container bring-to-front">
+          <div class="text-center mb-6"></div>
+
+          <div class="row gap-y">
+            <div class="col-md-6">
+              <div class="rounded shadow lift-hover p-4 pl-6 pl-md-9">
+                <h3 style="color: #6772e5" class="bold">
+                  School Management System
+                </h3>
+                <p class="text-secondary mb-0" style="color: black">
+                  Need Voice Broadcasting or Call Blasting Solution? Beep-in Ltd
+                  Voice Broadcasting / Call Broadcasting Solution is a mass
+                  Communication Techniques which lets you send automated voice
+                  calls to a large number of people at once. You can use Voice
+                  Broadcasting Service for Notifications, Alerts, Offers,
+                  Announcements, Surveys and more. You can also Records the
+                  Customer responses by DTMF implementing Simple IVR System in
+                  the Voice Blasting Solution further pushing Customer response
+                  into CRM
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded shadow lift-hover p-4 pl-6 pl-md-9">
+                <h3 style="color: #29d794" class="bold">
+                  Truck Fleet Trucking System
+                </h3>
+                <p class="text-secondary mb-0" style="color: black">
+                  We offera simpletousedashboardwhere youcan loginand do a
+                  varieryof thingse.g saving contacts, creating groups, sending
+                  and scheduling. Create a professional-looking email in no
+                  time! Choose to start with a template email template library,
+                  or build a new design from scratch! Add the blocks and style
+                  that you want using the intuitive drag & drop builder to
+                  perfectly match your b r a n d a n d w o w y o u r a u d i e n
+                  c e . Learn More
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded shadow lift-hover p-4 pl-6 pl-md-9">
+                <h3 style="color: #6772e5" class="bold">
+                  Call Center Solution
+                </h3>
+                <p
+                  class="text-secondary mb-0"
+                  style="color: black"
+                  style="margin-right: 30px"
+                >
+                  Beep-in Ltd call center solution provides the most advanced
+                  features that can be easily customized to suite any business
+                  requirements. We use Open Source Technology AsteriskTM which
+                  is considered as future of telephony. Beep- in Ltd delivers
+                  highly competitive technology at a reasonable cost and backed
+                  by its 24/7 global support center. *Beep-in Ltd call center
+                  solutions are trusted by major brands across 16 countries
+                  today
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="rounded shadow lift-hover p-4 pl-6 pl-md-9">
+                <h3 class="bold" style="color: #29d794">Bulk Emails</h3>
+                <p class="text-secondary mb-0">
+                  We offera simpletousedashboardwhere youcan loginand do a
+                  varieryof thingse.g saving contacts, creating groups, sending
+                  and scheduling. Create a professional-looking email in no
+                  time! Choose to start with a template email template library,
+                  or build a new design from scratch! Add the blocks and style
+                  that you want using the intuitive drag & drop builder to
+                  perfectly match your brand and wow your audience. Learn More
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded shadow lift-hover p-4 pl-6 pl-md-9">
+                <h3 class="bold" style="color: #6772e5">
+                  Voice Blasting Solution
+                </h3>
+                <p class="text-secondary mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Error eveniet nihil perspiciatis quia quidem quod ratione
+                  sapiente sint?
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="rounded shadow lift-hover p-4 pl-6 pl-md-9">
+                <h3 style="color: #29d794" class="bold">Bulk SMS</h3>
+                <p class="text-secondary mb-0" style="color: black">
+                  We offer a simple to use dashboard where you can login and do
+                  a variery of things e.g saving contacts, creating groups,
+                  seending and scheduling sms Learn More
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="section mt-6" id="sdjscxc">
+        <div class="container bring-to-front backgroundcolorts" id="sdjscxc">
+          <div class="container-fluid py-0" id="sdjscxc">
+            <div class="row align-items-center" id="sdjscxc">
+              <div class="col-md-12" id="sdjscxc">
+                <img
+                  alt="Beep In"
+                  class="logo d-none d-md-block"
+                  src="static/img/blogo.png"
+                />
+                <h3 id="homelaso">Home</h3>
+
+                <p style="font-family: Roboto Ubuntu, sans-serif">
+                  Beep-in Ltd Transforming Rwanda through Innovation. At Beep-in
+                  Ltd we offer ICT based solutions for your business. We have
+                  been in the industry since 2013. Our main activity is Bulk SMS
+                  Messaging, Bulk Email Messaging,Telemarketing and Call Centre
+                  Services. Beep-in Ltd is focused on building working Tech
+                  solutions that connect Africa both internally and to the
+                  outside world. The company believes in providing timely,
+                  reliable, quality and cost-effective IT solutions that enable
+                  clients to operate with maximum efficiency and effectiveness
+                  in their business operations. The go- to bulk sms and contact
+                  management company connecting over 180countries
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="singl-testimonial aos-init aos-animate">
+        <div class="container-fluid py-0">
+          <div
+            class="row align-items-center gradient gradient-navy-blue text-contrast"
+          >
+            <div
+              class="col-md-7 image-background cover center-top"
+              style="background-image: url(static/img/testimonials/66.jpg)"
+            ></div>
+            <div class="col-md-3 mx-auto py-4 py-md-0">
+              <blockquote class="bold mt-1 text-contrast lead">
+                <i class="quote fas fa-quote-left"></i>
+                Beep-In gave us the ability to send order notifications to our
+                customers from our organic food app
+              </blockquote>
+              <hr class="my-4" />
+              <div class="text-contrast">
+                <span class="bold d-block">Willy M,</span> CEO - Vovasoko
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section mt-6">
+        <div class="container-fluid py-0 backgroundcolorts" id="snkdaklsd">
+          <div class="container-fluid py-0">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h3 id="whyuseus">why use us</h3>
+              </div>
+              <div class="col-md-3" id="hirwald12">
+                <div id="aldoyua2">
+                  <h4 id="sdmskldmaskdj">GlobalReach</h4>
+                  Our SMS, Email and Voice Blasting platforms can reach to
+                  telecos in over 190 countries
+                  <h4 id="sdmskldmaskdj">FLexibility of Use</h4>
+                  Our platforms give you the flexibility of use. user or the API
+                  if you are a developer.
+                  <h4 id="sdmskldmaskdj">Good Pricing</h4>
+                  Our pricing rates are flexible enough to cater for even SMEs
+                  and developers.
+                  <div class="row align-items-center">
+                    <div class="col-md-9"></div>
+                    <div class="col-md-3">
+                      <i
+                        class="fas fa-long-arrow-alt-right ml-2"
+                        aria-hidden="true"
+                        id="jsdyaksd"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section mt-6 aos-init aos-animate">
+        <div class="container bring-to-front">
+          <div class="container-fluid py-0">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <h3 id="homelasoa">what more can you do?</h3>
+                <p>
+                  You can use the Beep-in API to connect your applications and
+                  send sms, Emails and Voice messages without having to login to
+                  our dashboard. We can give you a system where you buy sms from
+                  us and resell at a profit without having to mention us
+                  anywhere. Isn't that awesome?
+                </p>
+              </div>
+              <div class="col-md-6">
+                <img
+                  src="./undraw_new_ideas_jdea.svg"
+                  alt="images"
+                  id="undraw_finance"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section mt-6 sdasldsm">
+        <div class="container bring-to-front">
+          <div class="container-fluid py-0">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h3 id="homelasoa">Target Market</h3>
+                <p>Who are the customers you want to cater to?</p>
+              </div>
+              <div class="col-md-4" id="hirwald1212">
+                <div id="aldoyua2121">
+                  <div class="row align-items-center">
+                    <div class="col-md-9">
+                      <h4 id="hasd">SMEs</h4>
+                      <p id="bussinesf">
+                        Businesses in need of reaching out to their customers by
+                        using sms
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="./undraw_like_dislike_1dfj.svg"
+                        alt="dasd"
+                        id="undraw_finance"
+                      />
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-md-9">
+                      <h4 id="hasd">Software Developers</h4>
+                      <p id="bussinesf">
+                        People looking into building amaziing third party app
+                        consuming sms,crm and other
+                      </p>
+                    </div>
+                    <div class="col-md-3">
+                      <img
+                        src="./undraw_finance_0bdk.svg"
+                        alt="dasd"
+                        id="undraw_finance"
+                      />
+                    </div>
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col-md-9"></div>
+                    <div class="col-md-3">
+                      <i
+                        class="fas fa-long-arrow-alt-right ml-2"
+                        aria-hidden="true"
+                        id="jsdyaksd"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section mt-6">
+        <div class="container-fluid py-0 backgroundcolorts">
+          <div class="container-fluid py-0">
+            <div class="row align-items-center">
+              <div class="col-md-8" id="Our_Reach">
+                <h3 id="homelasoa1">Our Reach</h3>
+                <p>
+                  BeepIn has the ability to reach to a huge market and our API
+                  statistics and ability are asfollows
+                </p>
+              </div>
+              <div class="col-md-4">
+                <div id="backsdas">
+                  <div class="row align-items-center" id="sdldssaads">
+                    <div class="col-md-9"><h4 id="sdmsasfxc">120</h4></div>
+                    <div class="col-md-3">
+                      <i class="fas fa-arrow-down" id="usda"></i>
+                    </div>
+                  </div>
+                  <p id="sxaslkcd">API CALLS PER DAY</p>
+                </div>
+                <div id="backsdas">
+                  <div class="row align-items-center" id="sdldssaads">
+                    <div class="col-md-9">
+                      <h4 id="sdmsasfxc">Over 5 Million</h4>
+                    </div>
+                    <div class="col-md-3">
+                      <i class="fas fa-arrow-down" id="usda"></i>
+                    </div>
+                  </div>
+                  <p id="sxaslkcd">SOFTWARE DEVELOPERS</p>
+                </div>
+                <div id="backsdas">
+                  <div class="row align-items-center" id="sdldssaads">
+                    <div class="col-md-9"><h4 id="sdmsasfxc">190+</h4></div>
+                    <div class="col-md-3">
+                      <i class="fas fa-arrow-down" id="usda"></i>
+                    </div>
+                  </div>
+                  <p id="sxaslkcd">SERVICEABLE COUNTRIES</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <footer class="site-footer bg-light b-t section">
+        <div class="container pb-3">
+          <div class="row gap-y text-center text-md-left">
+            <div class="col-md-4 mr-auto">
+              <img alt="" class="logo" src="account/static/img/logo.png" />
+              <p class="normal lead">
+                Building technology solutions for Africa
+              </p>
+            </div>
+
+            <div class="col-md-2">
+              <h6 class="py-2 bold">Company</h6>
+              <nav class="nav flex-column">
+                <a class="nav-item py-2 bold" href="about-2.html">Home</a>
+                <a class="nav-item py-2 bold" href="#">Services</a>
+                <a class="nav-item py-2 bold" href="blog/blog-grid.html"
+                  >Blog</a
+                >
+              </nav>
+            </div>
+            <div class="col-md-2">
+              <h6 class="py-2 bold">Developers</h6>
+              <nav class="nav flex-column">
+                <a class="nav-item py-2 bold" href="#">Features</a>
+                <a class="nav-item py-2 bold" href="#">API</a>
+                <a class="nav-item py-2 bold" href="#">Customers</a>
+              </nav>
+            </div>
+            <div class="col-md-2">
+              <h6 class="py-2 bold">Legal</h6>
+              <nav class="nav flex-column">
+                <a class="nav-item py-2 bold" href="#">Careers</a>
+                <a class="nav-item py-2 bold" href="#">Contact</a>
+                <a class="nav-item py-2 bold" href="#">Search</a>
+              </nav>
+            </div>
+          </div>
+          <hr class="mt-5" />
+          <div class="row small align-items-center">
+            <div class="col-md-4">
+              <p
+                class="mt-2 mb-md-0 text-secondary text-center text-lg-left lead"
+              >
+                © Beep-In
+              </p>
+            </div>
+            <div class="col-md-8">
+              <nav class="nav justify-content-center justify-content-md-end">
+                <a
+                  class="btn btn-circle btn-sm btn-secondary mr-3 op-4"
+                  href="#"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a
+                  class="btn btn-circle btn-sm btn-secondary mr-3 op-4"
+                  href="#"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-circle btn-sm btn-secondary op-4" href="#"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="static/js/lib.min.js"></script>
+    <script src="static/js/dashcore.min.js"></script>
+    <script
+      src="../kit.fontawesome.com/4bdd8727e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <!-- Mirrored from beep-in.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Oct 2020 22:52:02 GMT -->
+</html>
